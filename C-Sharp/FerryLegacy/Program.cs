@@ -4,6 +4,15 @@ using System.Linq;
 
 namespace FerryLegacy
 {
+
+    /**
+    * The Main Program Changes
+    * 
+    *   Move all commands to command class
+    *   Added instance of commands class 
+    *   Use commands class to send a command into the commands class 
+    */
+
     public class Program
     {
         private static TimeTableService _timeTableService;
