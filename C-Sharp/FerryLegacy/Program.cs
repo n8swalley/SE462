@@ -9,7 +9,8 @@ namespace FerryLegacy
     * The Main Program Changes
     * 
     *   Move all commands to command class
-    *   Added instance of commands class 
+    *       done -> see Command.cs
+    *   Add instance of commands class 
     *   Use commands class to send a command into the commands class 
     */
 
