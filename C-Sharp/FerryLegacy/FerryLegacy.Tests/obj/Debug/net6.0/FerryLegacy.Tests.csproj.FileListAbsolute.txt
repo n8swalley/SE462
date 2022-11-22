@@ -1,0 +1,5 @@
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.csproj.AssemblyReference.cache
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.AssemblyInfoInputs.cache
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.AssemblyInfo.cs
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.csproj.CoreCompileInputs.cache

@@ -48,6 +48,7 @@
     <Compile Include="AvailableCrossing.cs" />
     <Compile Include="Booking.cs" />
     <Compile Include="Bookings.cs" />
+    <Compile Include="Commands.cs" />
     <Compile Include="Ferries.cs" />
     <Compile Include="Ferry.cs" />
     <Compile Include="FerryAvailabilityService.cs" />
@@ -69,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

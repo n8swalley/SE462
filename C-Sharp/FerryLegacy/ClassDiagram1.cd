@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FerryLegacy.AvailableCrossing">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAACAQCAAAAABFAAAAAAAAA=</HashCode>
+      <FileName>AvailableCrossing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Booking">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Booking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Bookings">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Bookings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Ferries">
+    <Position X="8.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Ferries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Ferry">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAQAgAAAAAAAAAQAACAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ferry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.FerryAvailabilityService">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAQAAgAAQAAAAAAAAAAEAAAAAAAAAQAAAA=</HashCode>
+      <FileName>FerryAvailabilityService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.FerryJourney">
+    <Position X="8.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAgAAAA=</HashCode>
+      <FileName>FerryJourney.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.FerryManager">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FerryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.FerryModule">
+    <Position X="10" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>FerryModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.JourneyBookingService">
+    <Position X="4.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAABAAAAAAAAABAIAEAAAAABAAAAAAAA=</HashCode>
+      <FileName>JourneyBookingService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Port">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Port.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.PortManager">
+    <Position X="3" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PortManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.PortModel">
+    <Position X="6.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAEABAQAAAUAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PortModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Ports">
+    <Position X="4.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Ports.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Program">
+    <Position X="1" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEgACAAAAhCAAAAABAAAQMAIAAAABAAhAAgAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.TimeTable">
+    <Position X="10" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TimeTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.TimeTableEntry">
+    <Position X="12" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAAAAAAAAAAAAAAAAABAAAAEAAAAAQA=</HashCode>
+      <FileName>TimeTableEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.TimeTables">
+    <Position X="8.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>TimeTables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.TimeTableService">
+    <Position X="10" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAABAIAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>TimeTableService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.TimeTableViewModelRow">
+    <Position X="11.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAIAAAEAAAIACAAAAABBAAAAAAAAA=</HashCode>
+      <FileName>TimeTableViewModelRow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
