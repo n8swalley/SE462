@@ -35,7 +35,7 @@ namespace FerryLegacy
         public static void Main(string[] args)
         {
             Start();
-            //TestCommands();
+            TestCommands();
             CommandLoop();
       
         }
@@ -61,27 +61,27 @@ namespace FerryLegacy
         }
 
 
-        //private static void TestCommands()
-        //{
-        //    DoCommand("help");
-        //    DoCommand("list ports");
-        //    DoCommand("search 2 3 00:00");
-        //    DoCommand("search 2 3 00:00");
-        //    DoCommand("book 10 2");
-        //    DoCommand("search 2 3 00:00");
-        //    DoCommand("book 10 10");
-        //    DoCommand("book 10 1");
-        //    DoCommand("search 1 2 01:00");
-        //    DoCommand("book 4 2");
-        //    DoCommand("book 6 8");
-        //    DoCommand("search 1 2 01:00");
-        //    DoCommand("search 1 3 01:00");
-        //    DoCommand("search 1 3 01:30");
-        //    DoCommand("book 5 16");
-        //    DoCommand("book 16 16");
-        //    DoCommand("search 1 3 00:00");
-        //    DoCommand("list bookings");
-        //}
+        private static void TestCommands()
+        {
+            DoCommand("help");
+            DoCommand("list ports");
+            DoCommand("search 2 3 00:00");
+            DoCommand("search 2 3 00:00");
+            DoCommand("book 10 2");
+            DoCommand("search 2 3 00:00");
+            DoCommand("book 10 10");
+            DoCommand("book 10 1");
+            DoCommand("search 1 2 01:00");
+            DoCommand("book 4 2");
+            DoCommand("book 6 8");
+            DoCommand("search 1 2 01:00");
+            DoCommand("search 1 3 01:00");
+            DoCommand("search 1 3 01:30");
+            DoCommand("book 5 16");
+            DoCommand("book 16 16");
+            DoCommand("search 1 3 00:00");
+            DoCommand("list bookings");
+        }
 
         private static void DisplayTimetable(List<Port> ports, List<TimeTableViewModelRow> rows)
         {

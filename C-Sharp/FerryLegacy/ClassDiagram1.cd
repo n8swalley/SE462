@@ -144,5 +144,19 @@
     <Position X="6.75" Y="2.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
+  <Class Name="FerryLegacy.Journey" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Journey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Commands" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAAgBQIAgABAQABCBBAACAAAAAIQCwAA4BCBAAQ=</HashCode>
+      <FileName>Commands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
