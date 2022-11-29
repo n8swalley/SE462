@@ -35,7 +35,6 @@ namespace FerryLegacy
         public static void Main(string[] args)
         {
             Start();
-            TestCommands();
             CommandLoop();
       
         }
