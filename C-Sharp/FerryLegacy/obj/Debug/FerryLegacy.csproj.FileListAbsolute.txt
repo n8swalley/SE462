@@ -23,3 +23,5 @@ C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\obj\Debug\FerryLegacy.cspr
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\obj\Debug\FerryLegacy.csproj.CopyComplete
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\obj\Debug\FerryLegacy.exe
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\obj\Debug\FerryLegacy.pdb
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\bin\Debug\Newtonsoft.Json.xml

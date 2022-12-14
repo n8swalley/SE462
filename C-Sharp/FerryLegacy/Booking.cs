@@ -2,12 +2,12 @@ namespace FerryLegacy
 {
     public class Booking
     {
-        public int JourneyId { get; set; }
+        // Edits:
+        // implement journey class & use object here instead
+        public Journey Journey { get; set; }
         public int Passengers { get; set; }
+        public decimal Weight { get; set; }
+        public int Vehicles { get; set; }
 
-        // add this
-
-        //public int Vehicles { get; set; }
-        //public decimal Weight { get; set; }
     }
 }

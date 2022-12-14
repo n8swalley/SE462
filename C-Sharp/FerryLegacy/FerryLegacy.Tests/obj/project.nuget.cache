@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LIL9Jy0HUDGGYrq9jzqoJeLsdWQAEaOE6KznrFELghqB/7Xa3C0G1Tycy/Q3uuauhSiADyjnlT/Q/LnsVfhsmg==",
+  "dgSpecHash": "jpZ2kaf9smTCW9qWMqdymBdu/b2ZLB1CvC3jXwHBKbwzuoe9mgL5cqYQdJxwKAU0zVNlO+d7XUcJFlUfbGg/zw==",
   "success": true,
   "projectFilePath": "C:\\Users\\nates\\source\\repos\\SE462\\C-Sharp\\FerryLegacy\\FerryLegacy.Tests\\FerryLegacy.Tests.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\nates\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\nates\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.3.2\\microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512",
     "C:\\Users\\nates\\.nuget\\packages\\microsoft.testplatform.testhost\\17.3.2\\microsoft.testplatform.testhost.17.3.2.nupkg.sha512",
+    "C:\\Users\\nates\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",
     "C:\\Users\\nates\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\nates\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\nates\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",

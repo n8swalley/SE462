@@ -1,17 +1,22 @@
+using Newtonsoft.Json;
+
 namespace FerryLegacy
 {
     public class Ferry
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Passengers { get; set; }
-        public int Vehicles { get; set; }
-        public decimal Weight { get; set; }
-        public int HomePortId { get; set; }
+        //[JsonProperty("Id")]
+        //public int Id { get; set; }
 
-        public Ferry()
-        {
-            HomePortId = 1;
-        }
+        [JsonProperty("Name")]
+        public string Name { get; set; }
+        [JsonProperty("Passengers")]
+        public int Passengers { get; set; }
+        [JsonProperty("Vehicles")]
+        public int Vehicles { get; set; }
+        [JsonProperty("Weight")]
+        public decimal Weight { get; set; }
+        [JsonProperty("HomePortId")]
+        public int HomePortId { get; set; }
+        public Journey Journey { get; set; }
     }
 }

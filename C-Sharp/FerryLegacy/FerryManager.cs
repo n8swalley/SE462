@@ -1,38 +1,47 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
+using ServiceStack;
 
 namespace FerryLegacy
 {
-    public static class FerryManager
+    public class FerryManager
     {
-        public static FerryJourney CreateFerryJourney(List<PortModel> ports, TimeTableEntry timetable)
+
+        private List<Ferry> _ferries;
+
+        private void ReadFerries()
         {
-            if (ports == null)
-                return null;
+            StreamReader reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\data\\ferries.txt");
+            string json = reader.ReadToEnd();
+            _ferries = JsonConvert.DeserializeObject<List<Ferry>>(json);
 
-            if (timetable == null)
-                return null;
-
-            var fj = new FerryJourney
+            foreach (var ferry in _ferries)
             {
-                Origin = ports.Single(x => x.Id == timetable.OriginId),
-                Destination = ports.Single(x => x.Id == timetable.DestinationId)
-            };
-            return fj;
+                ferry.Journey = null;
+            }
         }
 
-        public static void AddFerry(TimeTableEntry timetable, FerryJourney journey)
+        // Sets a ferry on a journey
+        public void SetFerryJourney(Ferry ferry, Journey journey)
         {
-            journey.Ferry = journey.Origin.GetNextAvailable(timetable.Time);
+            ferry.Journey = journey;
         }
 
-        public static int GetFerryTurnaroundTime(PortModel destination)
+        // Default Constructor 
+        public FerryManager()
         {
-            if (destination.Id == 3)
-                return 25;
-            if (destination.Id == 2)
-                return 20;
-            return 15;
+            _ferries = new List<Ferry>();
+            ReadFerries();
         }
+
+        // Return list of all the ferries
+        public List<Ferry> GetAllFerries()
+        {
+            return _ferries;
+        }
+ 
     }
 }

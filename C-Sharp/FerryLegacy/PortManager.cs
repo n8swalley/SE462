@@ -1,29 +1,118 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace FerryLegacy
 {
     public class PortManager
     {
-        private readonly Ports _ports;
-        private readonly Ferries _ferries;
+        private static List<Port> _ports;
 
-        public PortManager(Ports ports, Ferries ferries)
+        private void ReadPorts()
         {
-            _ports = ports;
-            _ferries = ferries;
+            StreamReader reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\data\\ports.txt");
+            string json = reader.ReadToEnd();
+            _ports = JsonConvert.DeserializeObject<List<Port>>(json);
+
+            foreach (var port in _ports)
+            {
+                port.Ferries = new List<Ferry>();
+                port.TimeTable = new List<TimeTableEntry>();
+            }
         }
 
-        public List<PortModel> PortModels()
+        // Assign ferries to their ports
+        private void PortFerries()
         {
-            var ports = _ports.All().Select(x => new PortModel(x)).ToList();
-            foreach (var ferry in _ferries.All())
+            foreach (var port in _ports)
             {
-                var port = ports.Single(x => x.Id == ferry.HomePortId);
-                port.AddBoat(new TimeSpan(0, 0, 10), ferry);
+                foreach (var ferry in SystemManager.GetAllFerries())
+                {
+                    if (ferry.HomePortId == port.Id)
+                    {
+                        port.Ferries.Add(ferry);
+                    }
+                }
             }
-            return ports;
+        }
+
+        // Assign a time table slot to a port
+        private void PortTimeTable()
+        {
+            foreach (var port in _ports)
+            {
+                foreach (var entry in SystemManager.GetFullTimeTable())
+                {
+                    if (entry.TimeTableId == port.Id)
+                    {
+                        entry.OriginId = entry.TimeTableId;
+                        port.TimeTable.Add(entry);
+                    }
+                }
+            }
+        }
+
+        // Default Constructor
+        public PortManager()
+        {
+            _ports = new List<Port>();
+            ReadPorts();
+            PortFerries();
+            PortTimeTable();
+        }
+
+        // Return list of all the ports
+        public List<Port> GetAllPorts()
+        {
+            return _ports;
+        }
+
+        // Return next available ferry at a port to leave to another port at a specific time
+        public Ferry GetNextAvailableFerry(Port origin, Port destination, TimeSpan departureTime)
+        {
+            Port port = _ports.Find(x => x.Id == origin.Id);
+
+            //Check to see if a ferry arrived from the next destination's port and is able to go
+            foreach (var ferry in port.Ferries)
+            {
+                if (destination.Id != ferry.HomePortId)
+                    continue;
+                if (ferry.Journey != null)
+                {
+                    if (ferry.Journey.Arrival < departureTime)
+                    {
+                        return ferry;
+                    }
+                }
+            }
+
+            //Otherwise send the next availble ferry
+            foreach (var ferry in port.Ferries)
+            {
+                if (destination.Id != ferry.HomePortId && origin.Id != ferry.HomePortId)
+                    continue;
+                if (ferry.Journey != null)
+                {
+                    if (ferry.Journey.Arrival < departureTime)
+                    {
+                        return ferry;
+                    }
+                }
+                else
+                    return ferry;
+            }
+
+            return null;
+        }
+
+        // Move ferry to a new port
+        public void MoveFerry(Ferry ferry, int originId, int destinationId)
+        {
+            Port oldPort = _ports.Find(x => x.Id == originId);
+            oldPort.Ferries.Remove(ferry);
+            Port newPort = _ports.Find(x => x.Id == destinationId);
+            newPort.Ferries.Add(ferry);
         }
     }
 }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="ServiceStack.Text">
       <HintPath>..\packages\ServiceStack.Text.4.0.23\lib\net40\ServiceStack.Text.dll</HintPath>
     </Reference>
@@ -45,33 +48,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvailableCrossing.cs" />
     <Compile Include="Booking.cs" />
-    <Compile Include="Bookings.cs" />
+    <Compile Include="BookingManager.cs" />
     <Compile Include="Journey.cs" />
     <Compile Include="Commands.cs" />
-    <Compile Include="Ferries.cs" />
     <Compile Include="Ferry.cs" />
-    <Compile Include="FerryAvailabilityService.cs" />
-    <Compile Include="FerryJourney.cs" />
     <Compile Include="FerryManager.cs" />
-    <Compile Include="FerryModule.cs" />
-    <Compile Include="JourneyBookingService.cs" />
+    <Compile Include="JourneyManager.cs" />
+    <Compile Include="SystemManager.cs" />
     <Compile Include="Port.cs" />
     <Compile Include="PortManager.cs" />
-    <Compile Include="PortModel.cs" />
-    <Compile Include="Ports.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimeTable.cs" />
     <Compile Include="TimeTableEntry.cs" />
-    <Compile Include="TimeTables.cs" />
-    <Compile Include="TimeTableService.cs" />
-    <Compile Include="TimeTableViewModelRow.cs" />
+    <Compile Include="TimeTableHelper.cs" />
+    <Compile Include="TimeTableManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Expected Time Table.txt" />

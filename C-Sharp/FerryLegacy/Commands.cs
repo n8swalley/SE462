@@ -1,61 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-
-//namespace FerryLegacy
-//{
-//    class Commands
-//    {
-//        // stores user command
-//        private static string userCmd = " ";
-
-//        // do commands here
-
-//        public static void Command(string command) 
-//        {
-//            userCmd = command;
-
-//            if (userCmd != null)
-//            {
-//                runCmd();
-//            }
-
-//        }
-
-//        private static void runCmd()
-//        {
-//            // call corresponding private method for each command
-//        }
-
-//        private static void startCmd()
-//        {
-//            // start command
-//        }
-
-//        private static void printAllCmds()
-//        {
-//           // print all commands
-//        }
-
-//        private static void exitCmd()
-//        {
-
-//        }
-
-
-
-
-
-
-//    }
-//}
-
-
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -63,13 +6,17 @@ namespace FerryLegacy
 {
     class Commands
     {
-        // Management System Connection
-        // Variable to determine if system has started
+        // Edits:
+        // - Separated Program.cs into Commands class
+        // - Resolved bug with Displaying TimeTable
+        // - added a few additional commands and cleaned code
+
+        // system start variable
         private static bool _systemWelcome = false;
-        // Varaible to store user command
+        
+        // user command
         private static string _command = "";
 
-        // Command - attempts to do the command
         public static void Command(string command)
         {
             _command = command;
@@ -77,7 +24,7 @@ namespace FerryLegacy
                 DoCommand();
         }
 
-        // Do Command in Command String - Calls corresponding private method for each command
+        // Calls corresponding method for each command
         private static void DoCommand()
         {
             if (_systemWelcome == true)
@@ -108,21 +55,17 @@ namespace FerryLegacy
             Console.WriteLine();
         }
 
-        // General Error - Tells user command is not recognized
-        private static void GeneralError()
-        {
-            Console.WriteLine("Unrecognized Command.");
-            Console.WriteLine("Type a command again or type [help] to see available commands.");
-        }
-
-        // Start Command - Welcome to system and gives basic instructions
+        // Start Command
         private static void StartCommand()
         {
             try
             {
-                Console.WriteLine("Welcome to the Ferry Finding System");
-                Console.WriteLine("=====================================");
-                Console.WriteLine("Type a command or type [help] to see available commands.");
+                Console.WriteLine("\nWelcome to the Ferry Finding System, Your Journey Awaits!");
+                Console.WriteLine("---------------------------------------------------------\n");
+                DisplayTimeTableCommand();
+                Console.WriteLine("\nPlease type a command from the folowing list:");
+                PrintAllCommands();
+
                 _systemWelcome = true;
             }
             catch (Exception)
@@ -131,20 +74,29 @@ namespace FerryLegacy
             }
         }
 
-        // Start Command Error - Displays startup error
+        // Error Handling for failed start
         private static void StartCommandError()
         {
             Console.WriteLine("Start failed.");
         }
 
-        // List Ports Command  - Displays all ports
+
+        // Error Handling for incorrect user input
+        private static void GeneralError()
+        {
+            Console.WriteLine("Unrecognized Command.");
+            Console.WriteLine("Type a command again or type [help] to see available commands.");
+        }
+
+
+        // List Ports Command
         private static void ListPortsCommand()
         {
             try
             {
                 Console.WriteLine("Ports:");
                 Console.WriteLine("------");
-                foreach (var port in ManagementSystem.GetAllPorts())
+                foreach (var port in SystemManager.GetAllPorts())
                 {
                     Console.WriteLine("Port {0} - {1}", port.Id, port.Name);
                 }
@@ -155,7 +107,7 @@ namespace FerryLegacy
             }
         }
 
-        // List Port Error - Displays listing error
+        // Error Handling for listing ports command
         private static void ListPortError()
         {
             Console.WriteLine("Listing ports unsuccessful.");
@@ -163,14 +115,14 @@ namespace FerryLegacy
 
         }
 
-        // List Bookings Command - Displays all bookings
+        // List Bookings Command
         private static void ListBookingsCommand()
         {
             try
             {
                 Console.WriteLine("Bookings:");
                 Console.WriteLine("---------");
-                foreach (var b in ManagementSystem.GetAllBookings())
+                foreach (var b in SystemManager.GetAllBookings())
                 {
                     Console.WriteLine("Journey {0} from {1} to {2} has {3} passengers and {4} vehicles weighing a total of {5} tons.",
                         b.Journey.Id,
@@ -188,14 +140,14 @@ namespace FerryLegacy
             }
         }
 
-        // List Bookings Error - Displays listing error
+        // Error Handling for listing bookings
         private static void ListBookingsError()
         {
             Console.WriteLine("Listing bookings unsuccessful.");
             PrintListCommands();
         }
 
-        // Search Command - Displays available journeys found in search
+        // Search command
         private static void SearchCommand()
         {
             try
@@ -205,7 +157,7 @@ namespace FerryLegacy
                 int destinationPortId = int.Parse(parts[2]);
                 TimeSpan time = TimeSpan.Parse(parts[3]);
 
-                List<Journey> availableJourneys = ManagementSystem.GetAvailableJourneys(originPortId, destinationPortId, time);
+                List<Journey> availableJourneys = SystemManager.GetAvailableJourneys(originPortId, destinationPortId, time);
 
                 foreach (var result in availableJourneys)
                 {
@@ -231,14 +183,14 @@ namespace FerryLegacy
             }
         }
 
-        // Search Error - Displays search error
+        // Error Handling for failed search
         private static void SearchError()
         {
             Console.WriteLine("Search unsuccessful.");
             PrintSearchCommand();
         }
 
-        // Book Command - Books an available journey
+        // Book Command
         private static void Book()
         {
             try
@@ -249,7 +201,9 @@ namespace FerryLegacy
                 int vehicles = Convert.ToInt32(parts[3]);
                 int weight = Convert.ToInt32(parts[4]);
 
-                bool booked = ManagementSystem.Book(journeyId, passengers, vehicles, weight);
+                bool booked = SystemManager.Book(journeyId, passengers, vehicles, weight);
+
+                // books an available journey
 
                 if (booked)
                     Console.WriteLine("Booked");
@@ -262,14 +216,14 @@ namespace FerryLegacy
             }
         }
 
-        // Booking Error - Displays booking error
+        // Error Handling for failed booking
         private static void BookingError()
         {
             Console.WriteLine("Book unsuccessful.");
             PrintBookingCommand();
         }
 
-        // Display Time Table Command - Displays the time table
+        // Display Time Table Command
         private static void DisplayTimeTableCommand()
         {
             try
@@ -277,12 +231,12 @@ namespace FerryLegacy
                 Console.WriteLine("Ferry Time Table:");
                 Console.WriteLine("-----------------");
 
-                foreach (var port in ManagementSystem.GetAllPorts())
+
+                foreach (var port in SystemManager.GetAllPorts())
                 {
                     PrintPortHeader(port.Name);
 
-                    // Every Journey is based on an entry in the timetable, use them to display timetable
-                    foreach (var journey in ManagementSystem.GetAllJourneys().OrderBy(x => x.Origin.Name).ThenBy(x => x.Departure))
+                    foreach (var journey in SystemManager.GetAllJourneys().OrderBy(x => x.Origin.Name).ThenBy(x => x.Departure))
                     {
                         if (journey.Origin.Id == port.Id)
                         {
@@ -291,8 +245,7 @@ namespace FerryLegacy
                                 journey.Destination.Name.PadRight(13),
                                 journey.Travel.ToString().PadRight(13),
                                 journey.Ferry.Name.PadRight(18),
-                                journey.Arrival.ToString().PadRight(8)
-                                );
+                                journey.Arrival.ToString().PadRight(8));
                         }
                     }
                 }
@@ -304,26 +257,46 @@ namespace FerryLegacy
             }
         }
 
-        // Display Time Table Error - Displays display error
+        // Error Handling for displating time table
         private static void DisplayTimeTableError()
         {
             Console.WriteLine("Display unsuccessful");
         }
 
-        // Clear Command - Clear the console
+        // Clear command
         private static void ClearCommand()
         {
+            // clears the current console
             Console.Clear();
             Console.WriteLine("Type a command or type [help] to see available commands.");
         }
 
-        // Clear Command - Clear the console
+        // Terminates program
         private static void ExitCommand()
         {
             Environment.Exit(0);
         }
 
-        // Print Port Header - Prints header for display time table
+
+        // Print Display Command
+        private static void PrintDisplayCommand()
+        {
+            Console.WriteLine("display timetable");
+        }
+
+        // Print Clear Command
+        private static void PrintClearCommand()
+        {
+            Console.WriteLine("clear");
+        }
+
+        // Print Exit Command
+        private static void PrintExitCommand()
+        {
+            Console.WriteLine("exit");
+        }
+
+        // Print Port Header
         private static void PrintPortHeader(string portName)
         {
             Console.WriteLine();
@@ -339,7 +312,7 @@ namespace FerryLegacy
             Console.WriteLine(" --------------------------------------------------------------------------");
         }
 
-        // Print Search Command - Prints the search command
+        // Print Search Command
         private static void PrintSearchCommand()
         {
             Console.WriteLine("Search Available Journeys:");
@@ -349,7 +322,7 @@ namespace FerryLegacy
             Console.WriteLine("       where hh::mm - time to search after");
         }
 
-        // Print Booking Command - Prints the booking command
+        // Print Booking Command
         private static void PrintBookingCommand()
         {
             Console.WriteLine("Book:");
@@ -360,7 +333,7 @@ namespace FerryLegacy
             Console.WriteLine("       where d - total vehicle(s) weight in tons");
         }
 
-        // Print List Commands - Prints the list command options
+        // Print List Commands
         private static void PrintListCommands()
         {
             Console.WriteLine("List:");
@@ -368,25 +341,7 @@ namespace FerryLegacy
             Console.WriteLine("  list ports");
         }
 
-        // Print Display Command - Prints command to display time table
-        private static void PrintDisplayCommand()
-        {
-            Console.WriteLine("display timetable");
-        }
-
-        // Print Clear Command - Prints command to clear the console
-        private static void PrintClearCommand()
-        {
-            Console.WriteLine("clear");
-        }
-
-        // Print Exit Command - Prints command to close the console
-        private static void PrintExitCommand()
-        {
-            Console.WriteLine("exit");
-        }
-
-        // Print All Commands - Prints all commands
+        // Print All Commands
         private static void PrintAllCommands()
         {
             Console.WriteLine("Commands are:");
