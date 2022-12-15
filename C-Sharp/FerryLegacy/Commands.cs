@@ -38,6 +38,8 @@ namespace FerryLegacy
                 SearchCommand();
             else if (_command.StartsWith("book", StringComparison.OrdinalIgnoreCase))
                 Book();
+            else if (_command.StartsWith("random", StringComparison.OrdinalIgnoreCase))
+                BookRandomCommand();
             else if (_command.StartsWith("list ports", StringComparison.OrdinalIgnoreCase))
                 ListPortsCommand();
             else if (_command.StartsWith("list bookings", StringComparison.OrdinalIgnoreCase))
@@ -63,7 +65,7 @@ namespace FerryLegacy
                 Console.WriteLine("\nWelcome to the Ferry Finding System, Your Journey Awaits!");
                 Console.WriteLine("---------------------------------------------------------\n");
                 DisplayTimeTableCommand();
-                Console.WriteLine("\nPlease type a command from the folowing list:");
+                Console.WriteLine("\nPlease enter a command");
                 PrintAllCommands();
 
                 _systemWelcome = true;
@@ -231,9 +233,10 @@ namespace FerryLegacy
                 Console.WriteLine("Ferry Time Table:");
                 Console.WriteLine("-----------------");
 
-
-                foreach (var port in SystemManager.GetAllPorts())
+                // loop thru ports
+                foreach (var port in SystemManager.GetAllPorts()) 
                 {
+                    // print ports headings
                     PrintPortHeader(port.Name);
 
                     foreach (var journey in SystemManager.GetAllJourneys().OrderBy(x => x.Origin.Name).ThenBy(x => x.Departure))
@@ -330,7 +333,7 @@ namespace FerryLegacy
             Console.WriteLine("       where a - journey id");
             Console.WriteLine("       where b - number of passengers");
             Console.WriteLine("       where c - number of vehicles");
-            Console.WriteLine("       where d - total vehicle(s) weight in tons");
+            Console.WriteLine("       where d - total weight of vehicle(s) in tons");
         }
 
         // Print List Commands
@@ -341,12 +344,44 @@ namespace FerryLegacy
             Console.WriteLine("  list ports");
         }
 
+        private static void PrintRandomTripCommand()
+        {
+            Console.WriteLine("Traveling alone and can't decide where to go? Let us book a random trip for you!");
+            Console.WriteLine("  random trip");
+        }
+
+        // Random Trip Command - Books a random trip for the user
+        private static void BookRandomCommand()
+        {
+            try 
+            {
+                // Picks random int less than 20
+                Random rnd = new Random();
+                int randID = rnd.Next(20);
+             
+                // books an available journey for one passenger and no vehicles
+                bool booked = SystemManager.Book(randID, 1, 0, 0);
+
+                if (booked)
+                    Console.WriteLine("Booked");
+                else
+                    Console.WriteLine("Cannot book that journey");
+            }   
+            catch (Exception)
+            {
+                BookingError();
+            }
+
+        }
+
         // Print All Commands
         private static void PrintAllCommands()
         {
             Console.WriteLine("Commands are:");
             Console.WriteLine("--------------");
             PrintBookingCommand();
+            Console.WriteLine();
+            PrintRandomTripCommand();
             Console.WriteLine();
             PrintSearchCommand();
             Console.WriteLine();

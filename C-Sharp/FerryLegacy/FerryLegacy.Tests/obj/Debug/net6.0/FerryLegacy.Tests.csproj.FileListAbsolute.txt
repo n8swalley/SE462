@@ -102,13 +102,14 @@ C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debu
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\FerryLegacy.exe
-C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\ServiceStack.Text.dll
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\FerryLegacy.pdb
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\FerryLegacy.exe.config
-C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\ServiceStack.Text.xml
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.csproj.CopyComplete
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.dll
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\refint\FerryLegacy.Tests.dll
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.pdb
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\FerryLegacy.Tests.genruntimeconfig.cache
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\obj\Debug\net6.0\ref\FerryLegacy.Tests.dll
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\FerryLegacy.Tests\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml

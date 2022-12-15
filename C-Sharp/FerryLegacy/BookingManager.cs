@@ -41,7 +41,7 @@ namespace FerryLegacy
             {
                 if (journey.Id == journeyId)
                 {
-                    // can book based off of passengers, tickets, and weight
+                    // can book based off of passengers, vehicles, and weight
                     var bookings = _bookings.Where(x => x.Journey.Id == journeyId);
                     var seatsLeft = journey.Ferry.Passengers - bookings.Sum(x => x.Passengers);
                     var vehiclesLeft = journey.Ferry.Vehicles - bookings.Sum(x => x.Vehicles);
