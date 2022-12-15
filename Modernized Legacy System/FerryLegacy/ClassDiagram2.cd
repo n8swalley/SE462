@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FerryLegacy.Booking">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAgAAAAAAAAAAAACEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Booking.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Journey" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FerryLegacy.SystemManager" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAIDgAQIAAAIAAAAACAAQAARAAAkJAAA=</HashCode>
+      <FileName>SystemManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_bookingManager" />
+      <Field Name="_journeyManager" />
+      <Field Name="_ferryManager" />
+      <Field Name="_portManager" />
+      <Field Name="_timeTableManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FerryLegacy.Ferry">
+    <Position X="7.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAgAAAAAAAAAQAACEQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ferry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.FerryManager" Collapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAIAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>FerryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Journey">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAAgAAAAggAAAAAACAAAACAAAAEAAAAAAA=</HashCode>
+      <FileName>Journey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Port">
+    <Position X="9.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Port.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.PortManager" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAgAAAAAAIAAAAAAAAACAAAAAQAAAAAAAA=</HashCode>
+      <FileName>PortManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Program">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.TimeTableEntry">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAAAAAAAAAAAAAAAAAAABAAAAEAAAAAQA=</HashCode>
+      <FileName>TimeTableEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.TimeTableManager" Collapsed="true">
+    <Position X="12.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TimeTableManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.Commands">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAAgBQIAgABAQABCBBAACAAAAAMUCwAA4BCBAAQ=</HashCode>
+      <FileName>Commands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.BookingManager" Collapsed="true">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABAAAAACAA=</HashCode>
+      <FileName>BookingManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FerryLegacy.JourneyManager" Collapsed="true">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAACAABAAA=</HashCode>
+      <FileName>JourneyManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
