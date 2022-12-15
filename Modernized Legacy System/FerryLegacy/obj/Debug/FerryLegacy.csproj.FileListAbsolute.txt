@@ -25,3 +25,19 @@ C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\obj\Debug\FerryLegacy.exe
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\obj\Debug\FerryLegacy.pdb
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\bin\Debug\Newtonsoft.Json.dll
 C:\Users\nates\source\repos\SE462\C-Sharp\FerryLegacy\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\Data\ferries.txt
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\Data\ports.txt
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\Data\timetable.txt
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\FerryLegacy.exe.config
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\FerryLegacy.exe
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\FerryLegacy.pdb
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\ServiceStack.Text.dll
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\bin\Debug\ServiceStack.Text.xml
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\obj\Debug\FerryLegacy.csproj.AssemblyReference.cache
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\obj\Debug\FerryLegacy.csproj.SuggestedBindingRedirects.cache
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\obj\Debug\FerryLegacy.csproj.CoreCompileInputs.cache
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\obj\Debug\FerryLegacy.csproj.CopyComplete
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\obj\Debug\FerryLegacy.exe
+C:\Users\nates\source\repos\SE462\Modernized Legacy System\FerryLegacy\obj\Debug\FerryLegacy.pdb

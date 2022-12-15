@@ -1,0 +1,8 @@
+**/build/
+**/.gradle/
+**/.idea
+
+**/.ipr
+**/.iws
+C-Sharp/FerryLegacy/bin
+C-Sharp/FerryLegacy/obj
